@@ -13,13 +13,6 @@ Role Variables
 |------------------------------|------------------------------------------------------|---------------|
 | grub_cmdline_options_present | A list of options to be present for the linux kernel | `[]`          |
 
-If you have options i.e. in `group_var` and some needed to be added additionally in `host_vars`, do it like this:
-
-## host_vars/your_host.yml
-```yaml
-grub_options: "{{ grub_options + ['i915.enable_psr=0'] }}"
-```
-
 Example Playbook
 ----------------
 ```yaml
