@@ -1,0 +1,3 @@
+---
+# defaults file for grub_cmdline_options
+grub_cmdline_options_present: []

@@ -1,0 +1,12 @@
+---
+
+- name: Configure linux kernel boot options in grub
+  ansible.builtin.lineinfile:
+    path: /etc/default/grub
+    regexp: '^GRUB_CMDLINE_LINUX_DEFAULT="((?:(?!{{ item }}).)*?)"$'
+    line: 'GRUB_CMDLINE_LINUX_DEFAULT="\1 {{ item }}"'
+    backrefs: true
+  loop: "{{ grub_cmdline_options_present }}"
+  notify: Reconfigure grub
+  become: true
+  become_user: root

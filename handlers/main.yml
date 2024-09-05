@@ -1,0 +1,7 @@
+---
+
+- name: Reconfigure grub
+  ansible.builtin.command: update-grub
+  changed_when: true
+  become: true
+  become_user: root
