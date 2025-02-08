@@ -1,5 +1,6 @@
 grub_cmdline_options
 ====================
+[![Ansible Lint](https://github.com/oxivanisher/role-grub_cmdline_options/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/oxivanisher/role-grub_cmdline_options/actions/workflows/ansible-lint.yml)
 
 This role ensures that grub options are added to the `GRUB_CMDLINE_LINUX_DEFAULT` variable in `/etc/default/grub`.
 Please be aware that this role does not manage the removal of options!
